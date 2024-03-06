@@ -33,4 +33,22 @@ print(df['setting'])
 # squiggly brackets for dictionaries
 french_to_english_dictionary = {'ours': 'bear'}
 
-print(french_to_english_dictionary['ours'])
+print(french_to_english_dictionary["ours"])
+
+print("The subcategories are: ")
+
+print(df["dimension"].unique())
+
+print("The variables are: ")
+
+print(df["indicator_name"].unique())
+
+# how many mothers who received postnatal care within two days of giving birth (%)
+
+indicator_mask = df["indicator_name"] == "Newborns who received postnatal care within two days of delivery (%)"
+print(indicator_mask)
+
+print(indicator_mask.sum())
+
+print(df[indicator_mask])
+
